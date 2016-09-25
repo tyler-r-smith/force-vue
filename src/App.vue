@@ -10,6 +10,7 @@
       <view-person v-if="selected == 'Person'"></view-person>
       <view-planet v-if="selected == 'Planet'"></view-planet>
       <view-starship v-if="selected == 'Starship'"></view-starship>
+      <view-species v-if="selected == 'Species'"></view-species>
     </div>
   </div>
 </template>
@@ -18,17 +19,19 @@
 import ViewPerson from './components/ViewPerson';
 import ViewPlanet from './components/ViewPlanet';
 import ViewStarship from './components/ViewStarship';
+import ViewSpecies from './components/ViewSpecies';
 
 export default {
   components: {
     ViewPerson,
     ViewPlanet,
     ViewStarship,
+    ViewSpecies,
   },
   data() {
     return {
 
-      apiSelect: ['Person', 'Planet', 'Starship', 'Vehicle'],
+      apiSelect: ['Person', 'Planet', 'Starship', 'Vehicle', 'Species'],
       selected: 'Person',
 
     };
